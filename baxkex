@@ -8,7 +8,6 @@
 # prevent data leakage by killing dangerous processes, changing MAC 
 # address and IP information and so on.
 #
-# Ask - Help: <baxkex@protonmail.com>
 # Copyright (C) 2019 baxkex Version: 1.0
 #
 # Inspired by "Backbox & ParrotSec anomnymous script" 
