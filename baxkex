@@ -208,35 +208,6 @@ check_root(){
         fi
 }
 
-
-clean_old (){
-
-mv /usr/bin/baxkex /opt/
-echo "$GREEN☑$ENDC Status: Done !"
-
-}
-
-updateall(){
-if grep -q -x 'update' /usr/bin/baxkex 
-then  
-       echo "$GREEN☑$ENDC Status: Updating...."      
-	
-		cd /usr/bin/
-		git clone https://github.com/sundowndev/PhoneInfoga.git /usr/share/phoneinfoga
-		cp secubox /usr/bin/baxkex
-		chmod +x /usr/bin/baxkex
-       echo "$GREEN☑$ENDC Status: Done !"
-	else
-		echo "$RED*$ENDC Fail to update\n"
-		mv /opt/baxkex /usr/bin/
-		chmod +x /usr/bin/baxkex
-
-	fi
-
-}
-
-
-
 # ===================================================================
 # Change mac address
 # ===================================================================
@@ -455,19 +426,9 @@ case "$1" in
         $0 stop
         $0 start
     ;;
-    update)
-    baxkex
-    check_root
-    clean_old
-    service network-manager stop
-    v
-    service network-manager start
-    ;;
     status)
 baxkex
 # run_bleachbit
-
-
     ;;
     *)
       echo "\n$RED[!] Usage: start hide with {start|stop|restart|status} $ENDC\n" 
