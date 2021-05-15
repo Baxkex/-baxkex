@@ -26,6 +26,6 @@ echo "STATUS: sudo baxkex status"
 echo "UPDATE: sudo baxkex update"
 echo "------------------------------"
 echo "\n$PURPLE☐ Read the info for help to run the script ...$ENDC\n"
-echo "Report bugs to https://github.com/keeganjk/kali-anonymous/issues"
+echo "Report bugs to https://github.com/Baxkex/baxkex/issues"
 
 
